@@ -506,6 +506,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#nexus-setup" class="md-nav__link">
+    Nexus Setup
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -645,6 +652,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#nexus-setup" class="md-nav__link">
+    Nexus Setup
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -663,6 +677,62 @@
 It is a java based web application server so we need to setup first java on the machine to run jenkins server.</p>
 <h2 id="jenkins-ci-cd-automation">Jenkins CI CD Automation<a class="headerlink" href="#jenkins-ci-cd-automation" title="Permanent link">&para;</a></h2>
 <p><img alt="image" src="../img/jenkins flow.png" /></p>
+<h2 id="nexus-setup">Nexus Setup<a class="headerlink" href="#nexus-setup" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Instance Details</th>
+<th>Resources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>t2.medium</td>
+<td>4GB Ram , 2 CPU</td>
+</tr>
+</tbody>
+</table>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Nexus Script</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+yum install java-1.8.0-openjdk.x86_64 wget -y   
+mkdir -p /opt/nexus/   
+mkdir -p /tmp/nexus/                           
+<span class="nb">cd</span> /tmp/nexus
+<span class="nv">NEXUSURL</span><span class="o">=</span><span class="s2">&quot;https://download.sonatype.com/nexus/3/latest-unix.tar.gz&quot;</span>
+wget <span class="nv">$NEXUSURL</span> -O nexus.tar.gz
+<span class="nv">EXTOUT</span><span class="o">=</span><span class="sb">`</span>tar xzvf nexus.tar.gz<span class="sb">`</span>
+<span class="nv">NEXUSDIR</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$EXTOUT</span> <span class="p">|</span> cut -d <span class="s1">&#39;/&#39;</span> -f1<span class="sb">`</span>
+rm -rf /tmp/nexus/nexus.tar.gz
+rsync -avzh /tmp/nexus/ /opt/nexus/
+useradd nexus
+chown -R nexus.nexus /opt/nexus 
+cat <span class="s">&lt;&lt;EOT&gt;&gt; /etc/systemd/system/nexus.service</span>
+<span class="s">[Unit]                                                                          </span>
+<span class="s">Description=nexus service                                                       </span>
+<span class="s">After=network.target                                                            </span>
+
+<span class="s">[Service]                                                                       </span>
+<span class="s">Type=forking                                                                    </span>
+<span class="s">LimitNOFILE=65536                                                               </span>
+<span class="s">ExecStart=/opt/nexus/$NEXUSDIR/bin/nexus start                                  </span>
+<span class="s">ExecStop=/opt/nexus/$NEXUSDIR/bin/nexus stop                                    </span>
+<span class="s">User=nexus                                                                      </span>
+<span class="s">Restart=on-abort                                                                </span>
+
+<span class="s">[Install]                                                                       </span>
+<span class="s">WantedBy=multi-user.target                                                      </span>
+
+<span class="s">EOT</span>
+
+<span class="nb">echo</span> <span class="s1">&#39;run_as_user=&quot;nexus&quot;&#39;</span> &gt; /opt/nexus/<span class="nv">$NEXUSDIR</span>/bin/nexus.rc
+systemctl daemon-reload
+systemctl start nexus
+systemctl <span class="nb">enable</span> nexus
+</code></pre></div>
 
               
             </article>
