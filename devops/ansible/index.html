@@ -1101,7 +1101,29 @@ To Execute the playbook
       <span class="nt">when</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ansible_distribution == &quot;Ubuntu&quot;</span>
 </code></pre></div>
 <h2 id="writing-playbook-to-create-vpc-in-aws-and-including-variables-from-different-file">Writing Playbook to Create VPC in AWS and Including Variables from different File<a class="headerlink" href="#writing-playbook-to-create-vpc-in-aws-and-including-variables-from-different-file" title="Permanent link">&para;</a></h2>
-<p>Creating File to store Variables
+<details class="info" open="open">
+<summary>Requirements</summary>
+<ul>
+<li>
+<p>python &gt;= 3.6</p>
+</li>
+<li>
+<p>boto3 &gt;= 1.15.0</p>
+</li>
+<li>
+<p>botocore &gt;= 1.18.0</p>
+</li>
+</ul>
+</details>
+<p><div class="highlight"><pre><span></span><code>apt install python3-pip
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">boto</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">boto3</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">botocore</span><span class="w"></span>
+</code></pre></div>
+Creating File to store Variables
 <div class="highlight"><pre><span></span><code>vim vpc_setup.txt
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="nl">vpc_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Vprofile-vpc&quot;</span><span class="w"></span>
