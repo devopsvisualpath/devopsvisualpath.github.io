@@ -349,6 +349,22 @@
   
 
       
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../miscellaneous/activedir/" class="md-tabs__link">
+        Miscellaneous
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -592,6 +608,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_12">
@@ -662,6 +680,120 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k8sdashboard/" class="md-nav__link">
+        k8s Dashboard
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Miscellaneous
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Miscellaneous" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Miscellaneous
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../miscellaneous/activedir/" class="md-nav__link">
+        Active Directory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../miscellaneous/ldap/" class="md-nav__link">
+        LDAP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../miscellaneous/nexus/" class="md-nav__link">
+        Nexus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../miscellaneous/sonarqube/" class="md-nav__link">
+        SonarQube
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -701,7 +833,7 @@
 
 
 <h1 id="git-cheat-sheet">Git Cheat Sheet<a class="headerlink" href="#git-cheat-sheet" title="Permanent link">&para;</a></h1>
-<p>Git is a version control system tool. Developers follow to create softwares , there is going to be lot of code that developers write or integrate in their softwares. all this code from different developers in the team has to be merged at a centralized place, which can keep track of all the versions of thier code,maintain the code and even revert back in time if anything breaks.</p>
+<p>Git is a version control system tool. Developers follow to create software, there is going to be a lot of code that developers write or integrate into their software. all this code from different developers in the team has to be merged at a centralized place, which can keep track of all the versions of their code, maintain the code and even revert in time if anything breaks.</p>
 <p>GIT BASICS</p>
 <table>
 <thead>
@@ -713,15 +845,15 @@
 <tbody>
 <tr>
 <td>git init <code>&lt;directory&gt;</code></td>
-<td>Create empty Git repo in specified directory. Run with no arguments to initialize the current directory as a git repository.</td>
+<td>Create empty Git repo in the specified directory. Run with no arguments to initialize the current directory as a git repository.</td>
 </tr>
 <tr>
 <td>git clone <code>&lt;repo&gt;</code></td>
-<td>Clone repo located at <code>&lt;repo&gt;</code> onto local machine. Original repo can be located on the local filesystem or on a remote machine via HTTP or SSH.</td>
+<td>Clone repo located at <code>&lt;repo&gt;</code> onto the local machine. The original repo can be located on the local filesystem or on a remote machine via HTTP or SSH.</td>
 </tr>
 <tr>
 <td>git config user.name <code>&lt;name&gt;</code></td>
-<td>Define author name to be used for all commits in current repo. Devs commonly use --global flag to set config options for current user.</td>
+<td>Define the author name to be used for all commits in the current repo. Devs commonly use --global flag to set config options for the current user.</td>
 </tr>
 <tr>
 <td>git add <code>&lt;directory&gt;</code></td>
@@ -756,15 +888,15 @@
 <tbody>
 <tr>
 <td>git revert <code>&lt;commit&gt;</code></td>
-<td>Create new commit that undoes all of the changes made in <commit>, then apply it to the current branch.</td>
+<td>Create a new commit that undoes all of the changes made in <commit>, then apply it to the current branch.</td>
 </tr>
 <tr>
 <td>git reset <code>&lt;file&gt;</code></td>
-<td>Remove <file> from the staging area, but leave the working directory unchanged. This unstages a file without overwriting any changes.</td>
+<td>Remove <file> from the staging area, but leave the working directory unchanged. This unstaged a file without overwriting any changes.</td>
 </tr>
 <tr>
 <td>git clean -n</td>
-<td>Shows which files would be removed from working directory.Use the -f flag in place of the -n flag to execute the clean.</td>
+<td>Shows which files would be removed from the working directory. Use the -f flag in place of the -n flag to execute the clean.</td>
 </tr>
 </tbody>
 </table>
@@ -802,7 +934,7 @@
 <tbody>
 <tr>
 <td>git remote add <code>&lt;name&gt;</code> <code>&lt;url&gt;</code></td>
-<td>Create a new connection to a remote repo. After adding a remote,you can use <name> as a shortcu for <url> in other commands.</td>
+<td>Create a new connection to a remote repo. After adding a remote,you can use <name> as a shortcut for <url> in other commands.</td>
 </tr>
 <tr>
 <td>git fetch <code>&lt;remote&gt;</code> <code>&lt;branch&gt;</code></td>
@@ -810,7 +942,7 @@
 </tr>
 <tr>
 <td>git pull <remote></td>
-<td>Fetch the specified remote’s copy of current branch and immediately merge it into the local copy.</td>
+<td>Fetch the specified remote’s copy of the current branch and immediately merge it into the local copy.</td>
 </tr>
 <tr>
 <td>git push <code>&lt;remote&gt;</code> <code>&lt;branch&gt;</code></td>
@@ -829,11 +961,11 @@
 <tbody>
 <tr>
 <td>git reset</td>
-<td>Reset staging area to match most recent commit, but leave the working directory unchanged.</td>
+<td>Reset the staging area to match the most recent commit but leave the working directory unchanged.</td>
 </tr>
 <tr>
 <td>git reset --hard</td>
-<td>Reset staging area and working directory to match most recent commit and overwrites all changes in the working directory.</td>
+<td>Reset staging area and working directory to match the most recent commit and overwrites all changes in the working directory.</td>
 </tr>
 <tr>
 <td>git reset <code>&lt;commit&gt;</code></td>
@@ -856,7 +988,7 @@
 <tbody>
 <tr>
 <td>git pull --rebase <code>&lt;remote&gt;</code></td>
-<td>Fetch the remote’s copy of current branch and rebases it into the localcopy. Uses git rebase instead of merge to integrate the branches.</td>
+<td>Fetch the remote’s copy of the current branch and rebase it into the local copy. Uses git rebase instead of the merge to integrate the branches.</td>
 </tr>
 </tbody>
 </table>
@@ -871,7 +1003,7 @@
 <tbody>
 <tr>
 <td>git push <code>&lt;remote&gt;</code> --force</td>
-<td>Forces the git push even if it results in a non-fast-forward merge. Do not use the --force flag unless you’re absolutely sure you know what you’re doing.</td>
+<td>Forces the git push even if it results in a non-fast-forward merge. Do not use the --force flag unless you’re sure you know what you’re doing.</td>
 </tr>
 <tr>
 <td>git push <code>&lt;remote&gt;</code> --all</td>

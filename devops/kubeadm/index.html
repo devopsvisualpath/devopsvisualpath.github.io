@@ -349,6 +349,22 @@
   
 
       
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../miscellaneous/activedir/" class="md-tabs__link">
+        Miscellaneous
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -584,6 +600,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_12">
@@ -715,6 +733,120 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k8sdashboard/" class="md-nav__link">
+        k8s Dashboard
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Miscellaneous
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Miscellaneous" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Miscellaneous
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../miscellaneous/activedir/" class="md-nav__link">
+        Active Directory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../miscellaneous/ldap/" class="md-nav__link">
+        LDAP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../miscellaneous/nexus/" class="md-nav__link">
+        Nexus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../miscellaneous/sonarqube/" class="md-nav__link">
+        SonarQube
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -788,7 +920,7 @@
                 
 
 
-<h1 id="creating-kubernetes-cluster-with-kubeadm">Creating Kubernetes Cluster with Kubeadm<a class="headerlink" href="#creating-kubernetes-cluster-with-kubeadm" title="Permanent link">&para;</a></h1>
+<h1 id="creating-kubernetes-cluster-with-kubeadm">Creating Kubernetes Cluster with kubeadm<a class="headerlink" href="#creating-kubernetes-cluster-with-kubeadm" title="Permanent link">&para;</a></h1>
 <details class="info" open="open">
 <summary>For this activity, deploy minimum 2 AWS instances with the Security groups</summary>
 <p>All traffic is enabled between the instances </p>
@@ -848,7 +980,7 @@ Update the list of packages and install the docker</p>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>deb http://apt.kubernetes.io kubernetes-xenial main
 </code></pre></div>
-Update the list of packages. And install kubelet, kubeadm and kubectl.</p>
+Update the list of packages. And install kubelet, kubeadm, and kubectl.</p>
 <p><div class="highlight"><pre><span></span><code>apt-get update 
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>apt-get install kubelet kubeadm kubectl -y
